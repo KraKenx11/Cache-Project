@@ -30,25 +30,20 @@ module tb_cache;
         .mem_wdata(mem_wdata), .mem_rdata(mem_rdata), .mem_ready(mem_ready)
     );
 
-    // Emulare asincronă corectă a Memoriei Principale
     initial mem_ready = 1'b0;
     always begin
-        // Așteaptă o cerere de la Cache
         wait(mem_read || mem_write);
-        #20; // Întârziere simulată de 20ns
+        #20;
         
         if (mem_read) mem_rdata = {256{1'b1}}; // Date dummy
         mem_ready = 1'b1;
         
-        // Așteaptă ca Cache-ul să retragă semnalul după ce a citit/scris
         wait(!mem_read && !mem_write);
         mem_ready = 1'b0;
     end
 
-    // Generare Ceas
     always #5 clk = ~clk;
 
-    // Scenariu de Test
     initial begin
         clk = 0; reset = 1;
         cpu_addr = 0; cpu_read = 0; cpu_write = 0; cpu_wdata = 0;
@@ -74,7 +69,7 @@ module tb_cache;
         wait(!cpu_ready);
         @(posedge clk); cpu_read = 0;
 
-        // Test 3: Provocare Write-Back
+        // Test 3: Write-Back
         wait(cpu_ready);
         
         @(posedge clk); cpu_addr = 21'h000808; cpu_write = 1; cpu_wdata = 32'hAAAAAAAA; wait(!cpu_ready); @(posedge clk); cpu_write = 0; wait(cpu_ready);

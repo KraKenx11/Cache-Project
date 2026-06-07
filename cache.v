@@ -4,7 +4,7 @@ module cache_32k_4way (
     input  wire        clk,
     input  wire        reset,
 
-    // Interfața cu Procesorul (CPU)
+    // Interfața cu Procesorul
     input  wire [20:0] cpu_addr,
     input  wire        cpu_read,
     input  wire        cpu_write,
@@ -50,7 +50,7 @@ module cache_32k_4way (
     reg [1:0] hit_way;
     reg [1:0] lru_way;
 
-    // Variabile separate pentru a evita buclele infinite (Race Conditions)
+    // Variabile separate pentru a evita buclele infinite
     integer r_i, r_j; // pentru reset
     integer c_i;      // pentru block-ul combinator Hit
     integer l_i;      // pentru block-ul combinator LRU
@@ -78,10 +78,10 @@ module cache_32k_4way (
         end
     end
 
-    // FSM - Logica principală (Single-Always Block)
+    // FSM - Logica principală
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            // Resetare array-uri (doar la reset)
+            // Resetare array-uri
             for (r_i = 0; r_i < 256; r_i = r_i + 1) begin
                 for (r_j = 0; r_j < 4; r_j = r_j + 1) begin
                     valid_array[r_i][r_j] <= 1'b0;
@@ -116,7 +116,7 @@ module cache_32k_4way (
                             dirty_array[index][hit_way] <= 1'b1;
                         end
 
-                        // Actualizare Politică LRU (0 devine MRU)
+                        // Actualizare Politică LRU
                         for (u_i = 0; u_i < 4; u_i = u_i + 1) begin
                             if (lru_array[index][u_i] < lru_array[index][hit_way])
                                 lru_array[index][u_i] <= lru_array[index][u_i] + 1;
