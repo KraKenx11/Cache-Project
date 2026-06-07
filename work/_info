@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/MODELSIM/ALU
+vcache_32k_4way
+Z0 !s110 1780844109
+!i10b 1
+!s100 GI;R9QP=TVL7`7Ne@BV9a2
+I;:6=@`3L[zUg;LMGLXn`;1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/MODELSIM/CACHE
+w1780844103
+8D:\MODELSIM\CACHE\cache.v
+FD:\MODELSIM\CACHE\cache.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1780844109.000000
+!s107 D:\MODELSIM\CACHE\cache.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\MODELSIM\CACHE\cache.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vtb_cache
+R0
+!i10b 1
+!s100 YR[OGhfLTNo1Th9C`igLY3
+IUD3>A29=b9oMZCLhgP3Af2
+R1
+R2
+w1780844087
+8D:\MODELSIM\CACHE\tb_cache.v
+FD:\MODELSIM\CACHE\tb_cache.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:\MODELSIM\CACHE\tb_cache.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\MODELSIM\CACHE\tb_cache.v|
+!i113 1
+R5
+R6
