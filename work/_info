@@ -7,46 +7,76 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/MODELSIM/ALU
-vcache_32k_4way
-Z0 !s110 1780844109
+dD:/MODELSIM/CACHE
+vcache_controller
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1780932939
 !i10b 1
-!s100 GI;R9QP=TVL7`7Ne@BV9a2
-I;:6=@`3L[zUg;LMGLXn`;1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dD:/MODELSIM/CACHE
-w1780844103
-8D:\MODELSIM\CACHE\cache.v
-FD:\MODELSIM\CACHE\cache.v
+!s100 C2DW[N>MS^7RLKhAnE9QX1
+IV0Ob3mKd;PazYBLn5U6eM1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 cache_controller_sv_unit
+S1
+Z3 dD:/MODELSIM/CACHE2
+w1780931232
+8D:/MODELSIM/CACHE2/source/cache_controller.sv
+FD:/MODELSIM/CACHE2/source/cache_controller.sv
 L0 3
-Z3 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1780844109.000000
-!s107 D:\MODELSIM\CACHE\cache.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\MODELSIM\CACHE\cache.v|
+Z5 !s108 1780932939.000000
+!s107 D:/MODELSIM/CACHE2/source/cache_controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/MODELSIM/CACHE2/source/cache_controller.sv|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vmemory
+R0
+R1
+!i10b 1
+!s100 `i_OP<RS0gA?og1J890RL2
+II[Ya52DbiASFfjORZBR5W1
+R2
+!s105 memory_sv_unit
+S1
+R3
+w1780932521
+8D:/MODELSIM/CACHE2/source/memory.sv
+FD:/MODELSIM/CACHE2/source/memory.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/MODELSIM/CACHE2/source/memory.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/MODELSIM/CACHE2/source/memory.sv|
+!i113 1
+R6
+R7
 vtb_cache
 R0
-!i10b 1
-!s100 YR[OGhfLTNo1Th9C`igLY3
-IUD3>A29=b9oMZCLhgP3Af2
 R1
+!i10b 1
+!s100 A8YHab_7g9c?[D]8RGCbI0
+If:POnIZhn]=5N>JV_Qf7X1
 R2
-w1780844087
-8D:\MODELSIM\CACHE\tb_cache.v
-FD:\MODELSIM\CACHE\tb_cache.v
-L0 3
+!s105 tb_cache_sv_unit
+S1
 R3
+w1780932935
+8D:\MODELSIM\CACHE2\testbench\tb_cache.sv
+FD:\MODELSIM\CACHE2\testbench\tb_cache.sv
+L0 3
+R4
 r1
 !s85 0
 31
-R4
-!s107 D:\MODELSIM\CACHE\tb_cache.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\MODELSIM\CACHE\tb_cache.v|
-!i113 1
 R5
+!s107 D:\MODELSIM\CACHE2\testbench\tb_cache.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:\MODELSIM\CACHE2\testbench\tb_cache.sv|
+!i113 1
 R6
+R7
